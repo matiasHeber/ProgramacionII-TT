@@ -115,6 +115,17 @@ if(persona.ciudad == 'Winterfell'){
 // d. Imprimir el array resultados en consola.
 // Prueba el código con distintos números base para asegurar que funciona
 // correctamente.
+
+let base = 4;
+let resultado = [];
+
+for (let i = 1; i <= 10; i++) {
+    resultado.push(base*i)
+}
+
+
+
+
 // 2. Próximo destino
 // a. Declara una variable destinos que guarde un array de strings con tu top 5
 // destinos del mundo al que quisieras viajar próximamente.
@@ -144,6 +155,54 @@ if(persona.ciudad == 'Winterfell'){
 // d. ¿Se te ocurre cómo hacer para generar más fácil un array de 100 notas y
 // probar este código?
 
+
+let notas = [80,90,100,70,65,60];
+
+// RESOLUCION CON FOR
+
+for (let i = 0; i < notas.length; i++) {
+    console.log(notas[i] + ' Equivale a ');
+    if (notas[i] >= 90 ) {
+        console.log('Nota alfabetica: A');
+    }else if(notas[i] >= 80){
+        console.log('Nota alfabetica: B');
+    }else if(notas[i] >= 70){
+        console.log('Nota alfabetica: C');
+    }
+}
+
+
+// RESOLUCION CON FOREACH Y ARROW FUNCTION
+
+// notas.forEach(nota => {
+//     console.log(nota + ' Equivale a ');
+//     if (nota >= 90 ) {
+//         console.log('Nota alfabetica: A');
+//     }else if(nota >= 80){
+//         console.log('Nota alfabetica: B');
+//     }else if(nota >= 70){
+//         console.log('Nota alfabetica: C');
+//     }
+// })
+
+// RESOLUCION CON FOREACH Y FUNCION TRADICIONAL
+
+// notas.forEach(function (nota) {
+//     console.log(nota + ' Equivale a ');
+//     if (nota >= 90 ) {
+//         console.log('Nota alfabetica: A');
+//     }else if(nota >= 80){
+//         console.log('Nota alfabetica: B');
+//     }else if(nota >= 70){
+//         console.log('Nota alfabetica: C');
+//     }
+// })
+
+
+
+
+
+
 // 4. Chequeo de ganancias
 // a. Crea la variable ganancias que contenga un array.
 
@@ -164,6 +223,58 @@ if(persona.ciudad == 'Winterfell'){
 // consola.
 // v. Definir una variable cantidadPositivos que permita calcular cuántos
 // meses tuvieron saldo positivo e imprimirla en consola.
+
+let ganancias = [
+    {
+        mes: 1,
+        saldo: 250 
+    },
+    {
+        mes: 2,
+        saldo: 500
+    },
+    {
+        mes: 3,
+        saldo: -100
+    },
+    {
+        mes: 4,
+        saldo: 200
+    },
+    {
+        mes: 5,
+        saldo: -200
+    },
+    {
+        mes: 6,
+        saldo: 350
+    },
+    {
+        mes: 7,
+        saldo: 400
+    },
+    {
+        mes: 8,
+        saldo: 800
+    },
+    {
+        mes: 9,
+        saldo: -500
+    },
+    {
+        mes: 10,
+        saldo: 400
+    },
+    {
+        mes: 11,
+        saldo: 200
+    },
+    {
+        mes: 12,
+        saldo: -150
+    },
+
+]
 
 // 5. Recorriendo personas
 // Dada la siguiente variable:
