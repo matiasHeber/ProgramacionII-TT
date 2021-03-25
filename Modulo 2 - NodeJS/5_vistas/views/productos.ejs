@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+  
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
+
+  <title>Autos</title>
+</head>
+<body class="uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+  
+  <h1 style="text-align: center; text-transform: capitalize" class="uk-padding">  <%= title %>  </h1>
+
+  <a href="/products" class="uk-button uk-button-primary uk-width-1-5">Volver al inicio</a>
+
+  <ul style="list-style: none;" class="uk-flex uk-flex-wrap uk-width-1-1 uk-flex-center uk-flex-middle uk-child-width-1-3">
+    <% for( let i=0; i < listaDeAutos.length; i++ ) { %>
+      <li class="uk-margin uk-flex uk-flex-center">
+        <div class="uk-card uk-card-default uk-card-body uk-card-hover uk-width-3-4">
+          <p>Modelo: 
+            <a style="text-transform: capitalize;" href="/products/porModelo/<%= listaDeAutos[i].modelo %> ">
+              <%= listaDeAutos[i].modelo %>
+            </a>
+          </p>
+          <p>Marca: 
+            <a style="text-transform: capitalize;" href="/products/porMarca/<%= listaDeAutos[i].marca %> ">
+              <%= listaDeAutos[i].marca %>
+            </a>
+          </p>
+          <p>Año: 
+            <a style="text-transform: capitalize;" href="/products/porAnio/<%= listaDeAutos[i].anio %> ">
+              <%= listaDeAutos[i].anio %>
+            </a>
+          </p>
+          <p>Color: 
+            <a style="text-transform: capitalize;" href="/products/porColor/<%= listaDeAutos[i].color %> ">
+              <%= listaDeAutos[i].color %>
+            </a>
+          </p>
+        </div>
+      </li>
+      <% } %>
+  </ul>
+  
+</body>
+</html>
